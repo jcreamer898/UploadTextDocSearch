@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text File</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <div class="container">
-      <header><h1>Grower's Challege</h1></header>
+      <header><h1>GROWERS' Challege</h1></header>
       <div class="rules">
         <h3>Write a program that does the following:</h3>
 
@@ -37,24 +33,45 @@
         </ul>
       </div>
       <div class="textDocument">
-        <h4>Upload File</h4>
-
+        <h4>Upload Text File &#x2A;</h4>
+       
         <input type="file" id="textInput" onchange="textReader()" /><br />
         <div class="inputWrapper">
+          <label for="searchBar"
+            ><p>Find string within the text doc and replace:</p></label
+          >
+           
           <input
             id="searchBar"
-            type="search"
-            placeholder="Search Text..."
-            name="search"
-            search-text
+            type="text"
+            placeholder="Find text..."
+
           />
-          <button id="searchBtn" type="submit">
-            <i class="fa fa-search"></i>
-          </button>
+        
+          
+    <input
+            id="replaceBar"
+            type="text"
+            placeholder="replace text with..."
+         
+          
+          />
+            <button id="replaceBtn">Replace</button>
+            <button id="searchBtn" type="submit">Get Occurance</button>
+          <div class="occurance">
+            <p id="occurance">Number of occurances =</p>
+          </div>
+          </div>
         </div>
-        <p class="output"></p>
+        <p>Save Changes</p>
+        <input id="saveBtn" type="button" value="save" onclick="saveText()"/>
+        <h3>Uploaded Text File:</h3>
+        <div >
+          <p class="output" id="textOuput"></p>
+
+        </div>
       </div>
     </div>
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
