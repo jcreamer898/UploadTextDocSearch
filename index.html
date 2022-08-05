@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text File</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+   
+  </head>
+  <body>
+    <div class="container">
+      <header><h1>Grower's Challege</h1></header>
+      <div class="rules">
+        <h3>Write a program that does the following:</h3>
+
+        <ul>
+          <li>1.Accept a file as input</li>
+          <li>2.Accept a string value as a "search parameter"</li>
+          <li>
+            3. Count every occurrence of the value of the "search parameter" in
+            the file
+          </li>
+          <li>
+            4.Replace each occurance of the "search parameter" with the value of
+            the "replacement parameter"
+          </li>
+          <li>5. Save the file</li>
+          <li>
+            6.Output the total number of occurrences of the "search parameter",
+            and the total number of replacements.
+          </li>
+        </ul>
+      </div>
+      <div class="textDocument">
+        <h4>Upload File</h4>
+
+        <input type="file" id="textInput" onchange="textReader()" /><br />
+        <div class="inputWrapper">
+          <input
+            id="searchBar"
+            type="search"
+            placeholder="Search Text..."
+            name="search"
+            search-text
+          />
+          <button id="searchBtn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <p class="output"></p>
+      </div>
+    </div>
+     <script src="script.js"></script>
+  </body>
+</html>
