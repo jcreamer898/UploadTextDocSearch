@@ -72,7 +72,11 @@ textarea {
 .output {
   padding-top: 30px;
   line-height: 1.5rem;
-  color: white;
+   color:black;
   width: 60%;
   margin: auto;
+  border: 3px solid black;
+  background-color: white;
 }
+#occurancesT
+{visibility: hidden;}
