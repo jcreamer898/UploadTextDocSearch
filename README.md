@@ -4,7 +4,7 @@
 
 ### Features
 - File Uploader that renders onto the UI for editing. 
-- Can replace instance of a string within a text and resaved.
+- Can replace instance of a string within a text and re-saved.
 
 ### Built with
 
@@ -13,20 +13,20 @@
 - HTML5
 
 ## Getting started
-- Choose text doc: Uploader will except script files and other documents and convert them to a string.
-- The "Get Occurance (search)" button will reveal the number of all occurances of the search bar value found within the text document. 
-- The "Replace and Save" button will replace all occurances of the search value with the replace value.
-- "Get Occurance (replace)" button will show all of the occurances of the replace bar value.
+- Choose text doc: Uploader will except script files and other doc types and convert them to a string.
+- The "Get Occurance (search)" button will reveal the number of all occurances of the search bar value/string found within the text document. 
+- The "Replace and Save" button will replace all occurances of the search value string with the replace value string.
+- "Get Occurance (replace)" button will show all of the occurances of the string within the replace bar value.
 - The "Get Total Replaced" will reveal what has been replaced.
 
 
 ### Other considerations for improvement:
 
-- Currently the code is verbose with variable namees that could be simplified.
+- Currently the code is verbose with variable names that could be simplified.
 - The value of the search and replace can be updated without refreshing the page. However,the input  will output the total replaced string for the first string. 
 - A counter will have to be created in order to store the value and update the total count.
-- The save button is currently attached to the replaced button. Ideailly, there should be a save button once all changes are met. 
-- Conditional statements and error handlers can be added to ensure that the values are imputed correctly. 
+- The save button is currently attached to the replaced button. Ideally, there should be a save button once all changes are met. 
+ 
 
 ### References for this project:
 - [FileReader.js](https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText)
