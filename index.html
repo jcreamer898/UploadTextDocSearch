@@ -6,72 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Text File</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <header><h1>GROWERS' Challege</h1></header>
+      <header><h1>Upload Text Doc and Replace String</h1></header>
       <div class="rules">
-        <h3>Write a program that does the following:</h3>
+        <h3>This program:</h3>
 
         <ul>
-          <li>1.Accept a file as input</li>
-          <li>2.Accept a string value as a "search parameter"</li>
+          <li>1.Accepts a file as input</li>
+          <li>2.Accepts a string value as a "search parameter"</li>
           <li>
-            3. Count every occurrence of the value of the "search parameter" in
+            3. Counts every occurrence of the value of the "search parameter" in
             the file
           </li>
           <li>
-            4.Replace each occurance of the "search parameter" with the value of
+            4.Replaces each occurance of the "search parameter" with the value of
             the "replacement parameter"
           </li>
-          <li>5. Save the file</li>
+          <li>5. Saves the file</li>
           <li>
-            6.Output the total number of occurrences of the "search parameter",
+            6.Outputs the total number of occurrences of the "search parameter",
             and the total number of replacements.
           </li>
         </ul>
       </div>
       <div class="textDocument">
-        <h4>Upload Text File &#x2A;</h4>
-       
+        <h4>Upload Text File &#x2A; (Text will appear below)</h4>
+
         <input type="file" id="textInput" onchange="textReader()" /><br />
         <div class="inputWrapper">
+          <button id="refresh" onclick="reloadPage()">Refresh</button>
           <label for="searchBar"
-            ><p>Find string within the text doc and replace:</p></label
+            ><p>Find string within the text doc and replace: <br>Note: Once string is replaced occurance for the search = 0</p></label
           >
-           
-          <input
-            id="searchBar"
-            type="text"
-            placeholder="Find text..."
 
-          />
-        
-          
-    <input
+          <label for="searchBar"><p>Search</p></label>
+          <input id="searchBar" type="text" placeholder="Find text..." />
+             <button
+            id="searchBtn"
+            type="submit"
+            value="Clear Results"
+            data-command="reset"
+          >
+            Get Occurance (Search)
+          </button>
+
+          <label for="replaceBar"><p>Replace</p></label>
+          <input
             id="replaceBar"
             type="text"
             placeholder="replace text with..."
-         
-          
           />
-            <button id="replaceBtn">Replace</button>
-            <button id="searchBtn" type="submit">Get Occurance</button>
+
+          <button id="replaceBtn">Replace and Save</button>
+         <p>This will give all of the occurances within the text.</p>
+          <button
+            id="replaceOcc"
+            type="submit"
+            value="Clear Results"
+            data-command="reset"
+          >
+            Get Occurance (replace)
+          </button>
+              <button
+            id="replaceTotal"
+            type="submit"
+            value="Clear Results"
+            data-command="reset"
+          >
+            Get Total Replaced
+          </button>
+          
           <div class="occurance">
-            <p id="occurance">Number of occurances =</p>
-          </div>
+            <p id="occurances">Number of occurances from search =</p>
+            <p id="occurancesR">Number of occurances from replacement =</p>
+              <p id="occurancesT">Replaced string =</p>
           </div>
         </div>
-        <p>Save Changes</p>
-        <input id="saveBtn" type="button" value="save" onclick="saveText()"/>
-        <h3>Uploaded Text File:</h3>
-        <div >
+      </div>
+      <div>
+        <h3>Uploaded Text File</h3>
+        <div class ="ouput">
           <p class="output" id="textOuput"></p>
-
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
